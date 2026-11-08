@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Demo: remova esta linha ao publicar o site de um cliente real -->
+  <meta name="robots" content="noindex">
+
+  <!-- SEO: estes textos ficam no HTML para os buscadores lerem sem JavaScript. Edite junto com dados.js. -->
+  <title>Panificadora Bom Fermento · Padaria no Setor Campinas, Goiânia</title>
+  <meta name="description" content="Pão francês quentinho às 6h, 11h e 16h no Setor Campinas, Goiânia. Veja se está aberto agora, o cardápio e faça sua encomenda pelo WhatsApp.">
+  <meta name="theme-color" content="#7A4A2A">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Panificadora Bom Fermento · Setor Campinas, Goiânia">
+  <meta property="og:description" content="Pão francês às 6h, 11h e 16h. Encomendas de bolo e salgado pelo WhatsApp.">
+  <!-- Ao publicar, troque pelo endereço absoluto: https://seudominio.com.br/img/pao-frances-1600.webp -->
+  <meta property="og:image" content="img/pao-frances-1600.webp">
+
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..700&family=Source+Sans+3:wght@400;600&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <link rel="preload" as="image" href="img/pao-frances-800.webp"
+        imagesrcset="img/pao-frances-800.webp 800w, img/pao-frances-1600.webp 1600w"
+        imagesizes="(min-width: 960px) 50vw, 100vw">
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <p class="aviso" data-campo="aviso">Site de demonstração — negócio fictício</p>
+
+  <header class="topo">
+    <div class="topo__interno">
+      <div class="topo__marca">
+        <a class="topo__nome" href="#inicio" data-campo="nome">Panificadora Bom Fermento</a>
+        <p class="status" id="status" role="status" aria-live="polite">
+          <span class="status__ponto" aria-hidden="true"></span>
+          <span class="status__texto">Confira o horário abaixo</span>
+        </p>
+      </div>
+      <a class="botao botao--ligar" href="tel:+556200000000" data-link="telefone" aria-label="Ligar para a padaria">Ligar</a>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- ABERTURA -->
+    <section class="abertura" id="inicio" aria-labelledby="titulo-abertura">
+      <div class="abertura__texto">
+        <h1 id="titulo-abertura" data-campo="titulo">Pão francês quentinho às 6h, 11h e 16h</h1>
+        <p class="abertura__apoio" data-campo="apoio">Padaria de bairro no Setor Campinas, em Goiânia. Bolo, salgado e docinho por encomenda.</p>
+        <div class="abertura__acoes">
+          <a class="botao botao--principal" href="#encomendas">Fazer encomenda</a>
+          <a class="botao botao--secundario" href="#como-chegar">Como chegar</a>
+        </div>
+      </div>
+      <figure class="abertura__foto">
+        <img src="img/pao-frances-800.webp"
+             srcset="img/pao-frances-800.webp 800w, img/pao-frances-1600.webp 1600w"
+             sizes="(min-width: 960px) 50vw, 100vw"
+             width="1600" height="1200" fetchpriority="high"
+             alt="Pães franceses dourados, recém-saídos do forno, amontoados com a casca aberta no corte">
+      </figure>
+    </section>
+
+    <!-- FORNADAS -->
+    <section class="fornadas" id="fornadas" aria-labelledby="titulo-fornadas">
+      <div class="fornadas__interno">
+        <header class="fornadas__cabeca">
+          <h2 id="titulo-fornadas">Fornadas de hoje</h2>
+          <p class="fornadas__dia" id="fornadas-dia">Horários do pão francês</p>
+        </header>
+        <ol class="linha" id="linha-fornadas">
+          <li class="linha__item"><span class="linha__hora">6h</span></li>
+          <li class="linha__item"><span class="linha__hora">11h</span></li>
+          <li class="linha__item"><span class="linha__hora">16h</span></li>
+        </ol>
+        <p class="fornadas__nota" id="fornadas-nota" hidden></p>
+      </div>
+    </section>
+
+    <!-- ENCOMENDAS -->
+    <section class="encomendas" id="encomendas" aria-labelledby="titulo-encomendas">
+      <div class="encomendas__intro">
+        <h2 id="titulo-encomendas">Encomendas</h2>
+        <p>Escolha o item e o dia. A mensagem já sai pronta no seu WhatsApp; você confere e manda.</p>
+        <p class="encomendas__prazo" id="prazo-encomenda">Pedidos com pelo menos 1 dia de antecedência.</p>
+        <figure class="encomendas__foto">
+          <img src="img/cafe-com-pao-800.webp"
+               srcset="img/cafe-com-pao-800.webp 800w, img/cafe-com-pao-1600.webp 1600w"
+               sizes="(min-width: 960px) 34vw, 100vw"
+               width="1600" height="1200" loading="lazy" decoding="async"
+               alt="Mão passando manteiga em pão à mesa, ao lado de uma xícara de café preto">
+        </figure>
+      </div>
+
+      <form class="formulario" id="form-encomenda" novalidate>
+        <div class="campo">
+          <label for="f-item">O que você quer encomendar</label>
+          <select id="f-item" name="produto" required aria-describedby="e-item">
+            <option value="">Escolha um item</option>
+          </select>
+          <p class="campo__erro" id="e-item"></p>
+        </div>
+
+        <div class="campo campo--metade">
+          <label for="f-qtd">Quantidade</label>
+          <input id="f-qtd" name="quantidade" type="number" inputmode="numeric" min="1" max="999" step="1" value="1" required aria-describedby="e-qtd">
+          <p class="campo__erro" id="e-qtd"></p>
+        </div>
+
+        <div class="campo campo--metade">
+          <label for="f-data">Para o dia</label>
+          <input id="f-data" name="data" type="date" required aria-describedby="d-data e-data">
+          <p class="campo__dica" id="d-data">A partir de amanhã</p>
+          <p class="campo__erro" id="e-data"></p>
+        </div>
+
+        <div class="campo">
+          <label for="f-nome">Seu nome</label>
+          <input id="f-nome" name="nome" type="text" autocomplete="name" maxlength="80" required aria-describedby="e-nome">
+          <p class="campo__erro" id="e-nome"></p>
+        </div>
+
+        <div class="campo">
+          <label for="f-obs">Observações <span class="opcional">(opcional)</span></label>
+          <textarea id="f-obs" name="observacoes" rows="3" maxlength="500" placeholder="Sabor do bolo, recheio, horário de retirada…"></textarea>
+        </div>
+
+        <button class="botao botao--principal botao--largo" type="submit">Enviar pelo WhatsApp</button>
+        <p class="formulario__nota">Nada fica salvo neste site. O pedido só é confirmado quando a padaria responder.</p>
+      </form>
+    </section>
+
+    <!-- CARDÁPIO -->
+    <section class="cardapio" id="cardapio" aria-labelledby="titulo-cardapio">
+      <figure class="cardapio__foto">
+        <img src="img/balcao-800.webp"
+             srcset="img/balcao-800.webp 800w, img/balcao-1600.webp 1600w"
+             sizes="(min-width: 960px) 30vw, 100vw"
+             width="1600" height="1200" loading="lazy" decoding="async"
+             alt="Vitrine de vidro de padaria iluminada, com pães e doces nas prateleiras">
+      </figure>
+      <div class="cardapio__conteudo">
+        <h2 id="titulo-cardapio">Cardápio do balcão</h2>
+        <div class="cardapio__lista" id="lista-cardapio"></div>
+        <p class="cardapio__nota" id="nota-precos">Preços ilustrativos de exemplo</p>
+      </div>
+    </section>
+
+    <!-- COMO CHEGAR -->
+    <section class="chegar" id="como-chegar" aria-labelledby="titulo-chegar">
+      <div class="chegar__info">
+        <h2 id="titulo-chegar">Como chegar</h2>
+        <address class="chegar__endereco">
+          <span data-campo="endereco">Av. Exemplo, 000 — Setor Campinas, Goiânia – GO</span><br>
+          <a href="tel:+556200000000" data-link="telefone" data-campo="telefone">(62) 0000-0000</a>
+          <span class="chegar__insta" id="insta-wrap" hidden> · <a id="insta-link" href="#" rel="noopener">Instagram</a></span>
+        </address>
+        <a class="botao botao--secundario" id="link-mapa" href="https://www.google.com/maps/search/?api=1&amp;query=Setor%20Campinas%2C%20Goi%C3%A2nia%20-%20GO" target="_blank" rel="noopener">Abrir no Google Maps</a>
+
+        <table class="horarios">
+          <caption>Horário de funcionamento</caption>
+          <tbody id="tabela-horarios"></tbody>
+        </table>
+      </div>
+      <div class="chegar__mapa">
+        <iframe id="mapa" title="Mapa do Setor Campinas, Goiânia"
+                src="https://www.google.com/maps?q=Setor%20Campinas%2C%20Goi%C3%A2nia%20-%20GO&amp;output=embed"
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p class="rodape__nome" data-campo="nome">Panificadora Bom Fermento</p>
+    <p data-campo="aviso-rodape">Site de demonstração — negócio fictício</p>
+    <p class="rodape__credito"><a href="#" id="credito-link">Site por Rafael Morais</a></p>
+    <p class="rodape__fotos">Fotos: Yasin Onus, Oksana Demenko e Ahtziri Lagarde, via Unsplash.</p>
+  </footer>
+
+  <script src="js/dados.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

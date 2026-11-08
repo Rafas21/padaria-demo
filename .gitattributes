@@ -1,0 +1,13 @@
+# Normaliza finais de linha: o repositório guarda LF,
+# independente do sistema de quem clona (Windows, macOS, Linux).
+* text=auto eol=lf
+
+# Binários: nunca converter
+*.webp binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.woff binary
+*.woff2 binary

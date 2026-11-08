@@ -1,0 +1,103 @@
+# =====================================================================
+# .gitignore: Panificadora Bom Fermento (site de demonstração)
+# Mantém fora do GitHub as regras e instruções do Claude Code e os
+# arquivos de trabalho. Assim, o repositório e o site publicado ficam
+# só com o que a página precisa.
+# =====================================================================
+
+
+# ---------------------------------------------------------------------
+# 1. Claude Code: regras, instruções e configurações pessoais
+# ---------------------------------------------------------------------
+# Regras de direção de arte e instruções para o agente
+CLAUDE.md
+CLAUDE.local.md
+**/CLAUDE.md
+**/CLAUDE.local.md
+
+# Configurações, permissões, hooks, comandos e agentes do projeto
+.claude/
+
+# Servidores MCP do projeto (podem conter tokens e caminhos locais)
+.mcp.json
+
+# Briefings e prompts usados para gerar o projeto
+prompt-*.md
+*.prompt.md
+prompts/
+
+
+# ---------------------------------------------------------------------
+# 2. Artefatos de revisão visual (capturas feitas durante o desenvolvimento)
+# ---------------------------------------------------------------------
+screenshots/
+
+
+# ---------------------------------------------------------------------
+# 3. Segredos e variáveis de ambiente
+# ---------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.dev.vars
+
+
+# ---------------------------------------------------------------------
+# 4. Node, Playwright e testes de produção
+# ---------------------------------------------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.npm/
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+coverage/
+
+
+# ---------------------------------------------------------------------
+# 5. Hospedagem / deploy (Cloudflare Pages e similares)
+# ---------------------------------------------------------------------
+.wrangler/
+.vercel/
+.netlify/
+dist/
+build/
+
+
+# ---------------------------------------------------------------------
+# 6. Sistema operacional
+# ---------------------------------------------------------------------
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+# macOS
+.DS_Store
+._*
+
+
+# ---------------------------------------------------------------------
+# 7. Editores e IDEs
+# ---------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+
+# ---------------------------------------------------------------------
+# 8. Temporários e logs
+# ---------------------------------------------------------------------
+*.log
+*.tmp
+*.bak
+.cache/
